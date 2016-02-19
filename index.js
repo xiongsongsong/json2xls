@@ -6,16 +6,28 @@
 var xlsx = require('node-xlsx');
 var _ = require('lodash');
 
+
+/*
+ * @params body JOSN
+ * */
 module.exports = function (body) {
     //get excel field, includes table fields define and row data
     var excel = _.get(body, 'excel');
     if (!excel) {
         throw new Error('excel is a required.');
     }
-    //get field defined
+
+    if (typeof excel !== 'object') {
+        throw new Error('excel must setting.');
+    }
+
     var fields = excel.fields;
-    if (typeof excel !== 'object' || typeof fields !== 'object') {
-        throw new Error('excel must setting');
+    if (!fields && !Array.isArray(fields)) {
+        throw new Error('excel.fields must be Array.');
+    }
+
+    if (!excel.path || typeof excel.path !== 'string') {
+        throw new Error('excel.path must setting.');
     }
 
     var _data = _.get(body, excel.path);
@@ -41,3 +53,5 @@ module.exports = function (body) {
     //return buffer
     return xlsx.build([{name: "mySheetName", data: rowList}]);
 };
+
+

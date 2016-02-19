@@ -4,7 +4,7 @@
   "description": "json to xls",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,10 @@
   "dependencies": {
     "node-xlsx": "^0.6.0",
     "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   },
   "homepage": "https://github.com/xiongsongsong/json2xls"
 }

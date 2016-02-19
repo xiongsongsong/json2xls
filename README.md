@@ -5,25 +5,27 @@
 # Example
 
 ```javascript
-var json={
+var json = {
     excel: {
-        path: "items",
+        path: "result.items",
         fileName: "demo.xlsx",
-        fields:[
+        fields: [
             ["姓名", "name"],
             ["年龄", "age"]
         ]
     },
-    items: [
-        {
-           name:"user A",
-           age:"29"
-    	},
-    	{
-           name:"user B",
-           age:"35"
-        }
-    ]
+    result: {
+        items: [
+            {
+                name: "user A",
+                age: "29"
+            },
+            {
+                name: "user B",
+                age: "35"
+            }
+        ]
+    }
 }
 
 var json2xlsx = require('json2xlsx');
@@ -38,4 +40,10 @@ app.get('/download', function(){
     res.end(buffer);
 });
 
+```
+
+# Test
+
+```bash
+npm test
 ```
