@@ -1,7 +1,8 @@
 # json2xls
 
-将JSON转换为XLSX文件
-
+```bash
+npm install json2xlsx
+```
 # Example
 
 ```javascript
