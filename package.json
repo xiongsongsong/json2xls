@@ -1,6 +1,6 @@
 {
-  "name": "json2xls",
-  "version": "0.0.1",
+  "name": "js2xls",
+  "version": "1.0.3",
   "description": "json to xls",
   "main": "index.js",
   "scripts": {

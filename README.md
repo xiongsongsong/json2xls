@@ -1,7 +1,7 @@
 # json2xls
 
 ```bash
-npm install json2xlsx
+npm install json2xls
 ```
 # Example
 
@@ -42,6 +42,9 @@ app.get('/download', function(){
 });
 
 ```
+
+![example](https://cloud.githubusercontent.com/assets/342509/13385467/0fa90e50-dedc-11e5-9eee-a9e2566d50cb.png)
+
 
 # Test
 

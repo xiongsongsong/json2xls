@@ -51,7 +51,10 @@ module.exports = function (body) {
     }
 
     //return buffer
-    return xlsx.build([{name: "mySheetName", data: rowList}]);
+    return xlsx.build([{
+      name: excel.sheetName ? excel.sheetName : 'sheet',
+      data: rowList
+    }]);
 };
 
 
