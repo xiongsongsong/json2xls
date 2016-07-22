@@ -1,5 +1,7 @@
 # json2xls
 
+如果需要尝试进行原生的拼装，参考：https://gist.github.com/xiongsongsong/8b16e39b20734579f10a
+
 ```bash
 npm install json2xls
 ```
